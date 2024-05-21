@@ -265,7 +265,7 @@ function procedimiento() {
             case "to":
 
             var posicion=document.createElement("p")
-            posicion.appendChild(document.createTextNode("to=To-((X-Xo)/v)"))
+            posicion.appendChild(document.createTextNode("To=T-((X-Xo)/v)"))
             
             var inputv=document.getElementById("idv").value
             var inputxo=document.getElementById("idxo").value
