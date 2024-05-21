@@ -1,0 +1,10 @@
+#espacio{
+    display: flex;
+    align-content: center;
+    
+}
+#espacio > input{
+    margin-top: 10px;
+    height: 20px;
+    margin-right: 20px;
+}
