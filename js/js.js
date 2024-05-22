@@ -61,7 +61,7 @@ function datosllenos() {
     if (lleno) {
         procedimiento()
     }else{
-        alert("llene el campo que falta")
+        alert("llene el campo  o los campos que faltan")
     }
     
 }
