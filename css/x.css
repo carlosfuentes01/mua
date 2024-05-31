@@ -44,3 +44,25 @@
      font-size: 20px;
  
  }
+ #ver_calculadora_mrua{
+    text-decoration: none;
+    background-color: rgb(108, 94, 238);
+    color: white;
+
+}
+#ver_calculadora_mrua:hover{
+    background-color: rgb(74, 56, 236);
+}#espacio{
+    display: flex;
+    align-content: center;
+    
+}
+#espacio > input{
+    margin-top: 10px;
+    height: 20px;
+    margin-right: 20px;
+}
+header{
+    background-color: rgb(108, 94, 238);
+    color: white;
+}

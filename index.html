@@ -3,21 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calculadora MU</title>
-    <script src="./js/js.js"></script>
-    <link rel="stylesheet" href="./css/y.css">
-    <link rel="stylesheet" href="./css/x.css">
+    <title>Calculadora MRUA</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/index.js"></script>
 </head>
 <body>
-<h1>calculadora MU</h1>
-<p>eliga cual es la desconocida, recuerde que deben estar en las mismas unidades</p>
-<select id="seleccion">
-    <option value="t">t</option>
-    <option value="to">t0</option>
-    <option value="v">v</option>
-    <option value="x" selected>x</option>
-    <option value="xo">x0</option>
-</select>
-<button onclick="mostrarConstantes()" id="botoncito">elegir magnitud a encontrar</button><br>
+    <header><a href="./html/mru.html" id="ver_calculadora_mru">ver calculadora MRU</a>
+        <h1>Calculadora MRUA</h1></header>
+    
+    
+    <div class="divisor">
+        <p>Esta calculadora le permitira hacer ejercicios de MRUA que involucren a un solo cuerpo</p>
+        <button onclick="calcular()">seleccionar ecuación</button>
+    </div>
+    <dialog id="calculadoraMRUA">
+        <p class="textocalculadora">
+            ¿En su problema le dieron valores de distancia o le piden hallar alguna distancia?
+        </p>
+        <select name="" id="seleccion">
+            <option value="si">
+                si
+            </option>
+            <option value="no">
+                no
+            </option>
+        </select>
+        <button onclick="aceptar()">aceptar</button>
+    </dialog>
+    <div id="contenedorest"></div>
+    <div id="input"></div>
+    <div id="resultados"></div>
+    <div></div>
+
 </body>
 </html>

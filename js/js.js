@@ -6,6 +6,7 @@ function mostrarConstantes(){
     if (mostrarinput) {
         borrar()
     }
+    var contenedor_de_contenedor=document.getElementById("contenedor_de_contenedor")
     var seleccion=document.getElementById("seleccion").value;
         var arrayselecciones=["t","to","v","x","xo"]
         var div=document.createElement("div");
@@ -25,20 +26,22 @@ function mostrarConstantes(){
     verprocedimiento.setAttribute("onclick","datosllenos(seleccion)")
     verprocedimiento.setAttribute("id","buton")
     verprocedimiento.appendChild(document.createTextNode("ver procedimiento"))
-    document.body.appendChild(verprocedimiento)
+    contenedor_de_contenedor.appendChild(verprocedimiento)
     
 }
 
 function crearespacio(magnitud,div){
+    var contenedor_de_contenedor=document.getElementById("contenedor_de_contenedor")
         var tipomagnitud=document.createElement("p")
         tipomagnitud.setAttribute("id","s"+magnitud)
         tipomagnitud.appendChild(document.createTextNode(magnitud))
         var inputtipomagnitud=document.createElement("input")
         inputtipomagnitud.setAttribute("id","id"+magnitud)
         inputtipomagnitud.setAttribute("type","number")
+        inputtipomagnitud.setAttribute("placeholder","escriba el valor de "+magnitud+" aqui")
     div.appendChild(tipomagnitud)
     div.appendChild(inputtipomagnitud)
-    document.body.appendChild(div);
+    contenedor_de_contenedor.appendChild(div);
 }
 function datosllenos() {
     var seleccion=document.getElementById("seleccion").value;
@@ -68,7 +71,9 @@ function datosllenos() {
 function procedimiento() {
     if (banderaprocedimiento) {
         borrarsol()
+        
     }
+    var resultadoouput= document.getElementById("resultadoouput")
     banderaprocedimiento=true
     var contenedor=document.createElement("div")
     contenedor.setAttribute("class","contenedor")
@@ -289,20 +294,21 @@ function procedimiento() {
             break;
     }
 
-    document.body.appendChild(contenedor)
+    resultadoouput.appendChild(contenedor)
 }
-
-function borrarsol(){ 
+function borrarsol(){
+    
+    var resultado=document.getElementById("resultado")
     var div2 = document.getElementById("contenedor")
-     document.body.removeChild(div2)         
+    resultado.removeChild(div2)         
  }
 function borrar(){
-    
+    var contenedor_de_contenedor=document.getElementById("contenedor_de_contenedor")
    var div = document.getElementById("espacio")
-    document.body.removeChild(div)
+   contenedor_de_contenedor.removeChild(div)
     
      var div3 = document.getElementById("buton")
-     document.body.removeChild(div3)
+     contenedor_de_contenedor.removeChild(div3)
      if (banderaprocedimiento) {
         borrarsol()
      }

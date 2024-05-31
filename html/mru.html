@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora MRU</title>
+    <script src="../js/js.js"></script>
+    <link rel="stylesheet" href="../css/x.css">
+</head>
+<body>
+    <header><a  href="../index.html" id="ver_calculadora_mrua">ver calculadora MRUA</a>
+        <h1>Calculadora MU</h1></header>
+
+    
+<p>Eliga cual es la desconocida, recuerde que deben estar en las mismas unidades</p>
+<select id="seleccion">
+    <option value="t" >t</option>
+    <option value="to">t0</option>
+    <option value="v" >v</option>
+    <option value="x" selected>x</option>
+    <option value="xo">x0</option>
+</select>
+<button onclick="mostrarConstantes()" id="botoncito">Elegir magnitud a encontrar</button><br>
+<div id="contenedor_de_contenedor"></div>
+<div id="resultadoouput"></div>
+<div></div>
+</body>
+</html>
