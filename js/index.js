@@ -466,8 +466,8 @@ function resultadox() {
             break;
             case "t":
 // at^2 + Vot + Xo=X
-alert("Opción no disponible por el momento")
-seleccionot=true
+
+
             var posicion=document.createElement("p")
             posicion.appendChild(document.createTextNode("at^2 + Vot + Xo-X=0"))
             
@@ -475,9 +475,9 @@ seleccionot=true
             var inputa=document.getElementById("ida").value
             var inputx=document.getElementById("idx").value
             var inputVo=document.getElementById("idVo").value
-            valores.appendChild(document.createTextNode(inputa+"t^2"+"+"+inputVo+"(t)"+"+"+inputXo+"-"+inputx))
-            
-
+            valores.appendChild(document.createTextNode(inputa+"t^2"+"+"+inputVo+"(t)"+"+"+inputXo+"-"+inputx+"=0"))
+            var resultado=-inputVo+Math.sqrt((inputVo*inputVo)-(4*inputa*(inputXo-inputx)))
+            resultado/=(2*inputa)
 
             
             console.log(resultado)
@@ -486,6 +486,10 @@ seleccionot=true
             contenedor.appendChild(posicion)
             contenedor.appendChild(valores)
             contenedor.appendChild(resultadoprint)
+            if (resultado==NaN) {
+                seleccionot=true
+                alert("no es posible hacer esa operación")
+            }
             
             break;
             case "Xo":
